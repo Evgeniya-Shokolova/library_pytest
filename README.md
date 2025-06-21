@@ -1,6 +1,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![PyTest-HTML](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 
 ## Инструкция по созданию и запуску автоматизированных тестов для текстовой библиотеки на Python
@@ -32,6 +33,10 @@ source venv/Scripts/activate
 ```bash
 source venv/bin/activate
 ```
+Установить зависимости из файла requirements.txt:
+```bash
+pip install -r requirements.txt
+```
 Установить PyTest:
 ```bash
 pip install pytest
@@ -62,11 +67,15 @@ pip install pytest-html
 ```
 Для генерации отчета в HTML формате:
 ```bash
-pytest --tb=short --html=report.html --self-contained-html test_text_functions.py
+pytest --tb=short --html=report.html --self-contained-html test_functions.py
 ```
 Это создаст файл report.html, который можно открыть в браузере для ознакомления с результатами тестов.
+Чтобы открыть файл report.html в браузере, выполните следующие шаги:
+1. Через проводник:
+   - Дважды щелкните по файлу левой кнопкой мыши. Обычно по умолчанию он откроется в вашем браузере.
 
-Комментарии к коду
+2. Через браузер:
+   - Перетащите файл report.html из проводника в окно браузера.
 
 - Каждый тест имеет строки с проверками assert, которые сопоставляют ожидаемые выходные данные с фактическими.
 - Тесты структурированы так, что легко добавлять новые случаи, какими бы сложными они ни были.
